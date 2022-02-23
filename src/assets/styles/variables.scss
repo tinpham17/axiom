@@ -1,0 +1,36 @@
+$gap: 30px;
+$tablet: 768px;
+$modal-background-background-color: rgba(0, 0, 0, 0.5);
+$column-gap: 15px;
+$container-max-width: 1300px;
+
+$font-size-100: 11px;
+$font-size-200: 13px;
+$font-size-300: 14px;
+$font-size-400: 17px;
+$font-size-500: 22px;
+$font-size-600: 28px;
+$font-size-700: 36px;
+$line-height-100: 18px;
+$line-height-200: 20px;
+$line-height-300: 24px;
+$line-height-400: 27px;
+$line-height-500: 30px;
+$line-height-600: 40px;
+$line-height-700: 45px;
+
+$breakpoint-mobile: 600px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1120px;
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: $breakpoint-desktop) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (min-width: $breakpoint-tablet) { @content ; }
+  }
+  @else if $point == mobile {
+    @media (max-width: $breakpoint-mobile)  { @content ; }
+  }
+}
